@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- Link icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Link style-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-store"></i>
+                <h1>Fashion <span>Finesse</span></h1>
+            </div>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="div-text">
+                <span>outfit of the day</span>
+                <h3>all your</h3>
+                <h1>styles are here</h1>
+                <p>Welcome to Fashion Finesses - your ultimate destination for style, elegance,
+                    and unparalleled fashion finesse! At Fashion Finesse, we curate a mesmerizing collection of trendsetting attire and accessories that redefine fashion standards.</p>
+                    <a href="#" class="btn">buy now</a>
+            </div>
+
+            <div class="div-img">
+                <img id="big-img" src="images/jac1.png" alt="">
+            </div>
+
+            <div class="small-img">
+                <img onclick="myJacket(this.src)" src="images/jac1.png" alt="">
+                <img onclick="myJacket(this.src)" src="images/jac2.png" alt="">
+                <img onclick="myJacket(this.src)" src="images/jac3.png" alt="">
+                <img onclick="myJacket(this.src)" src="images/jac4.png" alt="">
+                <img onclick="myJacket(this.src)" src="images/jac5.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let bigImage = document.getElementById('big-img');
+        function myJacket(jacket){
+            bigImage.src = jacket
+        }
+    </script>
+    
+</body>
+</html>
