@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Edu+NSW+ACT+Foundation:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root{
+    /*===== Main colors ====*/
+    --first-color: #0e2431;
+    --second-color: linear-gradient(45deg, #f06,blue);
+    --third-color: #777;
+
+    /*===== Hover color ====*/
+    --hover-color: linear-gradient(45deg, #f06,blue);
+
+    /*===== background color ====*/
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, 0.1);
+    --transparent-color-01: rgba(0, 0, 0, 0.1);
+    --transparent-color-02: rgba(106, 89, 209, 0.1);
+    --line-color: #d7d7d7;
+
+    /*===== color filter ====*/
+    --color-filter: invert(1);
+
+    /*===== box shadow ====*/
+    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+
+    /*===== font size ====*/
+    --small-font-size: 0.9em;
+    --normal-font-size: 18px;
+    
+    --scroll-bar-color: #c5cadf;
+    --scroll-thumb-color: #70768a;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--first-color);
+    background: var(--body-bg-color);
+    margin: 2rem 0 0 0;
+    transition: .5s ease;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* header section */
+header{
+    z-index: 99999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+
+.nav-bar{
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    transition: .6s ease;
+}
+
+.nav-bar .logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.nav-items a{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-items a:not(:last-child){
+    margin-right: 50px;
+}
+
+.nav-items a.active,
+.nav-items a:hover{
+    background: linear-gradient(45deg, #f06,blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nav-items a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(45deg, #f06,blue);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+.nav-items a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
