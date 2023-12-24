@@ -226,15 +226,16 @@ header.sticky .nav-bar {
     background: var(--hover-color);
 }
 
-/*.home-container .home-img {
+ .home-container .home-img { 
     position: relative;
-    padding-left: 80px;
+    display: flex;
+    padding-left: 100px;
 }
 
 .home-container .home-img img {
     width: 50%;
     transform: translate(0 ,0);
-}*/
+}
 
 .home .scroll-down {
     color: var(--first-color);
