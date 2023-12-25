@@ -32,3 +32,25 @@ modalCloseBtns.forEach((modalCloseBtn) => {
         });
     });
 });
+
+const projectModals = document.querySelectorAll(".project-model");
+const imgCards = document.querySelectorAll(".img-card");
+const projectCloseBtns = document.querySelectorAll(".project-close-btn");
+
+var projectModal = function(modalClick) {
+    projectModals[modalClick].classList.add("active");
+}
+
+imgCards.forEach((imgCard, i) =>{
+    imgCard.addEventListener("click", () => {
+        projectModal(i);
+    });
+});
+
+projectCloseBtns.forEach((projectCloseBtn) => {
+    projectCloseBtn.addEventListener("click", () => {
+        projectModals.forEach((projectModalView) => {
+            projectModalView.classList.remove("active");
+        });
+    });
+});
