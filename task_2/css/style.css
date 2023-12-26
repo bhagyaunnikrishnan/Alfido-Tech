@@ -770,6 +770,55 @@ header.sticky .nav-bar {
   background: var(--hover-color);
 }
 
+.certificates .container {
+  flex-direction: column;
+}
+
+.certificates .container .content {
+  width: 100%;
+}
+
+.certificate-swiper .swiper-wrapper {
+  margin-bottom: 30px;
+}
+
+.certificate-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.certificate-img {
+  width: 850px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.certificate-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certificate-swiper .swiper-button-next:after, 
+.certificate-swiper .swiper-button-prev:after {
+  content: '';
+}
+
+.certificate-swiper .swiper-button-next i, 
+.certificate-swiper .swiper-button-prev i {
+  color: var(--second-color);
+  font-size: 3em;
+}
+
+.certificate-swiper .swiper-pagination-bullet,
+.certificate-swiper.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
 
 
 
