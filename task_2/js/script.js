@@ -6,10 +6,14 @@ var typed = new Typed(".multiple-text", {
     loop: true
 })
 
+//Scroll header sticky
+
 window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+//Services
 
 const serviceModals = document.querySelectorAll(".service-modal");
 const readmoreBtns = document.querySelectorAll(".read-more-btn");
@@ -33,6 +37,8 @@ modalCloseBtns.forEach((modalCloseBtn) => {
     });
 });
 
+//Project
+
 const projectModals = document.querySelectorAll(".project-model");
 const imgCards = document.querySelectorAll(".img-card");
 const projectCloseBtns = document.querySelectorAll(".project-close-btn");
@@ -55,6 +61,8 @@ projectCloseBtns.forEach((projectCloseBtn) => {
     });
 });
 
+//Swiper Certificate
+
 var swiper = new Swiper(".certificate-swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -68,3 +76,36 @@ var swiper = new Swiper(".certificate-swiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+// Scroll to Top
+
+const scrollToTopBtn = document.querySelector(".scrollToTop-btn");
+
+window.addEventListener("scroll", function() {
+    scrollToTopBtn.classList.toggle("active", this.window.scrollY > 500);
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+// Nav items active on scrolling
+
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 50;
+        let id = current.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
+        }
+        else {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+        }
+    });
+});
