@@ -1296,7 +1296,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
   .about .container .content {
     display: grid;
     width: 100%;
@@ -1324,5 +1324,11 @@ footer {
   .skills .container p {
     text-align: center;
   }
+
+  .skills-info, .bars {
+    display: grid;
+  }
+
+
 
 }
